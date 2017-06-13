@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>Hexo + GitHub Pages搭建个人博客 | logyoo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="大概的流程  搭建 Node.js 环境 搭建 Git 环境 GitHub 注册和配置 安装配置 Hexo 关联 Hexo 与 GitHub Pages GitHub Pages 地址解析到个人域名 Hexo 的常用操作 结束语  Quick Start1.搭建 Node.js 环境在 Node.js 官网：https://nodejs.org/ 然后打开命令提示符，输入  1$ node -v">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo + GitHub Pages搭建个人博客">
+<meta property="og:url" content="https://logyoo.github.io/2017/06/13/Hexo-GitHubPages/index.html">
+<meta property="og:site_name" content="logyoo">
+<meta property="og:description" content="大概的流程  搭建 Node.js 环境 搭建 Git 环境 GitHub 注册和配置 安装配置 Hexo 关联 Hexo 与 GitHub Pages GitHub Pages 地址解析到个人域名 Hexo 的常用操作 结束语  Quick Start1.搭建 Node.js 环境在 Node.js 官网：https://nodejs.org/ 然后打开命令提示符，输入  1$ node -v">
+<meta property="og:image" content="http://img.mukewang.com/57eea87a0001c62213450582.png?_=6927340">
+<meta property="og:image" content="http://oph264zoo.bkt.clouddn.com/17-5-28/34921926.jpg">
+<meta property="og:updated_time" content="2017-06-13T08:04:32.570Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo + GitHub Pages搭建个人博客">
+<meta name="twitter:description" content="大概的流程  搭建 Node.js 环境 搭建 Git 环境 GitHub 注册和配置 安装配置 Hexo 关联 Hexo 与 GitHub Pages GitHub Pages 地址解析到个人域名 Hexo 的常用操作 结束语  Quick Start1.搭建 Node.js 环境在 Node.js 官网：https://nodejs.org/ 然后打开命令提示符，输入  1$ node -v">
+<meta name="twitter:image" content="http://img.mukewang.com/57eea87a0001c62213450582.png?_=6927340">
+    
+        <link rel="alternate" type="application/atom+xml" title="logyoo" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/4034970a304e251f9a147319a186c9177e3e536b.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/da8e974dc_xl.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">logyoo</h5>
+          <a href="mailto:logyoo51@qq.com" title="logyoo51@qq.com" class="mail">logyoo51@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                Index
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/logyoo" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://weibo.com/logyoo" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Hexo + GitHub Pages搭建个人博客</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Hexo + GitHub Pages搭建个人博客</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-06-13T07:22:14.129Z" itemprop="datePublished" class="page-time">
+  2017-06-13
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Quick-Start"><span class="post-toc-number">1.</span> <span class="post-toc-text">Quick Start</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-搭建-Node-js-环境"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">1.搭建 Node.js 环境</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-搭建-Git-环境"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">2.搭建 Git 环境</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-GitHub-注册和配置"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">3.GitHub 注册和配置</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-安装配置-Hexo"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">4.安装配置 Hexo</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-关联-Hexo-与-GitHub-Pages"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">5.关联 Hexo 与 GitHub Pages</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-Hexo-GitHubPages"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Hexo + GitHub Pages搭建个人博客</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-06-13 15:22:14" datetime="2017-06-13T07:22:14.129Z"  itemprop="datePublished">2017-06-13</time>
+
+            
+
+
+            
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p><em>大概的流程</em></p>
+<ol>
+<li>搭建 Node.js 环境</li>
+<li>搭建 Git 环境</li>
+<li>GitHub 注册和配置</li>
+<li>安装配置 Hexo</li>
+<li>关联 Hexo 与 GitHub Pages</li>
+<li>GitHub Pages 地址解析到个人域名</li>
+<li>Hexo 的常用操作</li>
+<li>结束语</li>
+</ol>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="1-搭建-Node-js-环境"><a href="#1-搭建-Node-js-环境" class="headerlink" title="1.搭建 Node.js 环境"></a>1.搭建 Node.js 环境</h3><p>在 Node.js 官网：<br><a href="https://nodejs.org/" target="_blank" rel="external">https://nodejs.org/</a></p>
+<p>然后打开命令提示符，输入 </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ node -v npm -v</div></pre></td></tr></table></figure>
+<p>出现版本号则说明 Node.js 环境配置成功，第一步完成！！！</p>
+<h3 id="2-搭建-Git-环境"><a href="#2-搭建-Git-环境" class="headerlink" title="2.搭建 Git 环境"></a>2.搭建 Git 环境</h3><p>在 Git 官网：<br><a href="https://git-scm.com/downloads" target="_blank" rel="external">https://git-scm.com/downloads</a>下载安装包</p>
+<p>桌面右键，打开 Git Bush Here，输入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git --version</div></pre></td></tr></table></figure>
+<p>出现版本号则说明 Git 环境配置成功，第二步完成！！！</p>
+<h3 id="3-GitHub-注册和配置"><a href="#3-GitHub-注册和配置" class="headerlink" title="3.GitHub 注册和配置"></a>3.GitHub 注册和配置</h3><p>Github注册：<a href="https://github.com/" target="_blank" rel="external">https://github.com/</a><br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.mukewang.com/57eea87a0001c62213450582.png?_=6927340" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure></p>
+<p>创建仓库：Repository name 使用自己的用户名，仓库名规则：</p>
+<p>注意：yourname 必须是你的用户名。</p>
+<p>yourname/yourname.github.io</p>
+<p>访问 yourname.github.io，如果可以正常访问，那么 Github 的配置已经结束了。</p>
+<p>到此搭建 Hexo 博客的相关环境配置已经完成，下面开始讲解 Hexo 的相关操作</p>
+<h3 id="4-安装配置-Hexo"><a href="#4-安装配置-Hexo" class="headerlink" title="4.安装配置 Hexo"></a>4.安装配置 Hexo</h3><p>Hexo 的官方文档：<a href="https://hexo.io/zh-cn/" target="_blank" rel="external">https://hexo.io/zh-cn/</a></p>
+<p>使用 npm 安装 Hexo：在命令行中输入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-cli -g</div></pre></td></tr></table></figure>
+<p>查看Hexo的版本</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo version</div></pre></td></tr></table></figure>
+<p>安装 Hexo 完成后，请执行下列命令来初始化 Hexo，用户名改成你的，Hexo 将会在指定文件夹中新建所需要的文件。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo init yourname.github.io</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> yourname.github.io</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install</div></pre></td></tr></table></figure>
+<p>.deploy             #需要部署的文件</p>
+<p>node_modules        #Hexo插件</p>
+<p>public              #生成的静态网页文件</p>
+<p>scaffolds       #模板</p>
+<p>source          #博客正文和其他源文件，404、favicon、CNAME 都应该放在这里</p>
+<p>_drafts       #草稿</p>
+<p>_posts        #文章</p>
+<p>themes          #主题</p>
+<p>_config.yml     #全局配置文件</p>
+<p>package.json    #npm 依赖等</p>
+<p>运行本地 Hexo 服务</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>或者<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo s</div></pre></td></tr></table></figure></p>
+<p>您的网站会在 <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> 下启动。如果 <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> 能够正常访问，则说明 Hexo 本地博客已经搭建起来了，只是本地哦，别人看不到的。下面，我们要部署到Github。<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://oph264zoo.bkt.clouddn.com/17-5-28/34921926.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure></p>
+<p>注意1：执行hexo server提示找不到该指令</p>
+<p>解决办法：在Hexo 3.0 后server被单独出来了，需要安装server，安装的命令如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-server</div></pre></td></tr></table></figure>
+<p>或者</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo -server --save</div></pre></td></tr></table></figure>
+<h3 id="5-关联-Hexo-与-GitHub-Pages"><a href="#5-关联-Hexo-与-GitHub-Pages" class="headerlink" title="5.关联 Hexo 与 GitHub Pages"></a>5.关联 Hexo 与 GitHub Pages</h3>
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-06-13T08:04:32.570Z" itemprop="dateUpdated">2017-06-13 16:04:32</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2017/06/13/Hexo-GitHubPages/" target="_blank" rel="external">https://logyoo.github.io/2017/06/13/Hexo-GitHubPages/</a>
+        
+    </div>
+    <footer>
+        <a href="https://logyoo.github.io">
+            <img src="/img/da8e974dc_xl.jpg" alt="logyoo">
+            logyoo
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://logyoo.github.io/2017/06/13/Hexo-GitHubPages/&title=《Hexo + GitHub Pages搭建个人博客》 — logyoo&pic=https://logyoo.github.io/img/da8e974dc_xl.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://logyoo.github.io/2017/06/13/Hexo-GitHubPages/&title=《Hexo + GitHub Pages搭建个人博客》 — logyoo&source=logyoo (Web developer)" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://logyoo.github.io/2017/06/13/Hexo-GitHubPages/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Hexo + GitHub Pages搭建个人博客》 — logyoo&url=https://logyoo.github.io/2017/06/13/Hexo-GitHubPages/&via=https://logyoo.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://logyoo.github.io/2017/06/13/Hexo-GitHubPages/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/06/13/hello-world/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Hello World</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>logyoo &copy; 2015 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://logyoo.github.io/2017/06/13/Hexo-GitHubPages/&title=《Hexo + GitHub Pages搭建个人博客》 — logyoo&pic=https://logyoo.github.io/img/da8e974dc_xl.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://logyoo.github.io/2017/06/13/Hexo-GitHubPages/&title=《Hexo + GitHub Pages搭建个人博客》 — logyoo&source=logyoo (Web developer)" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://logyoo.github.io/2017/06/13/Hexo-GitHubPages/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Hexo + GitHub Pages搭建个人博客》 — logyoo&url=https://logyoo.github.io/2017/06/13/Hexo-GitHubPages/&via=https://logyoo.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://logyoo.github.io/2017/06/13/Hexo-GitHubPages/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJklEQVR42u3aQY7DIAwF0N7/0pntSDMh3ziNFHisqjYCXhaubfh84nH8Gsk3f389m208580DAwPjtYxjOMYLj6nVree//rMKBgbGBoyzhcef8+eT2cZPXuwZAwMDI36mmj7218XAwMAoT9cuiTEwMDA6RWzeVsuDb54s3laLY2BgvJCRh8jnP3/lfAMDA+NVjKM47mrPjQN0eVcYGBhLM/IAl1+PSJLFudd0cVyKgYGxNOPRZYpHC+VkEQMDYznGXLicOx7oXBq7AGNgYGzAqLb+kyOBvHxNVm/1AjEwMF7O6DTuq1tMUsxWmoiBgbElI7kkUZ1t7kJGFHwxMDAWZeTt/s71iH4Qv0goMTAwtmHkDbJqqpcUvXNpJQYGxj6M6uFilZ2nmPnls8JtEQwMjJcz5q5fVMvRuZc1brFhYGDsw0gugVWXrPJuAGNgYGzGqDbu81KzevErv1mBgYGxA6NfiFZbaXPXLE7ZGBgYSzPy5loeKJPlO6nkxWwYGBiLMm5IzhpXvjpB9jRBxMDAWJoxF3D7jbk80ZwsZTEwMBZi3Nt6yzfaSRwxMDDWZhzFUd3Wo/U3BgbGoox8VA8vkxZefkjQSTcxMDDWYHRK1mrAzb+pHqZiYGDswKi24/MjzH7zLkJiYGBg9Lt6xefzkI2BgYFRLUcLydzU1r/yv4GBgfESRpK6RdMVk8L8Vd5Wi2NgYLyQkZeO1UDZSTdbaSIGBsY6jB/CnCLgYfRE1QAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
